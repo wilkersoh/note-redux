@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { authActions } from "../store/index"
+import { authActions } from "../store/auth"
 
 const Header = () => {
   const dispatch = useDispatch();
