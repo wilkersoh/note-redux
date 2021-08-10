@@ -7,7 +7,6 @@ const Cart = () => {
   const cartQuantity = useSelector(state => state.cart.totalQuantity);
 
   const cartItems = useSelector((state) => state.cart.items);
-  console.log('cartItems :>> ', cartItems);
 
   const removeItem = (id) => {
     dispatch(cartActions.removeItemFromCart(id));
