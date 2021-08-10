@@ -7,10 +7,19 @@ const Cart = () => {
   const cartQuantity = useSelector(state => state.cart.totalQuantity);
 
   const cartItems = useSelector((state) => state.cart.items);
-
+  console.log('cartItems :>> ', cartItems);
 
   const removeItem = (id) => {
     dispatch(cartActions.removeItemFromCart(id));
+  }
+
+  const addItem = (item) => {
+    const {price, id} = item;
+
+    dispatch(cartActions.addItemToCart({
+      id,
+      price,
+    }))
   }
 
   return (
@@ -23,6 +32,7 @@ const Cart = () => {
             <p>totalPrice: {item.totalPrice}</p>
             <p>price: {item.price}</p>
             <button onClick={() => removeItem(item.id)}>Remove item</button>
+            <button onClick={() => addItem(item)}>Add item</button>
           </li>
         ))}
       </ul>
