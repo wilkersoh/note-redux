@@ -48,6 +48,8 @@ const cartSlice = createSlice({
 
 // Middlewware
 // A functuon return another function （ 那個 async dispatch ）
+// How to use it ?
+// dispatch(sendCartData(cart))
 export const sendCartData = (cart) => {
   return async (dispatch) => {
     dispatch(
