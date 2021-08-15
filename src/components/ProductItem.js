@@ -6,7 +6,6 @@ const ProductItem = ({ title, description, price, id }) => {
   const dispatch = useDispatch()
 
   const addToCart = () => {
-    console.log("dsdsd");
     dispatch(cartActions.addItemToCart({
       id,
       price,
